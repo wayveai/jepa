@@ -9,6 +9,7 @@ from setuptools import setup
 
 VERSION = "0.0.1"
 
+
 def get_requirements():
     with open("./requirements.txt") as reqsf:
         reqs = reqsf.readlines()
@@ -22,4 +23,5 @@ if __name__ == "__main__":
         description="JEPA research code.",
         python_requires=">=3.9",
         install_requires=get_requirements(),
+        package_dir={"src": "jepa"},
     )
